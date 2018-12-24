@@ -1,0 +1,537 @@
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+body, html {
+  overflow-y: visible;
+}
+
+/* img {
+  max-width: 100%;
+} */
+
+.clearfix::after{
+  content: '';
+  clear: both;
+  display: block;
+  visibility: hidden;
+}
+
+:root {
+  color: #222;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+li, ol {
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* Main Nav */
+
+.nav_main {
+  background-color: white;
+  height: 75px;
+  line-height: 75px;
+  position: fixed;
+  padding-bottom: 20px;
+  top: 0;
+  text-align: left;
+  width: 100vw;
+  z-index: 5;
+}
+
+.nav-options {
+  margin-right: 25px;
+  text-align: center;
+  float: right;
+  vertical-align: middle;
+}
+
+.nav_main form, .nav_main ul {
+  display: inline-block;
+}
+
+.nav_main form {
+  line-height: 75px;
+  margin-left: 110px;
+}
+
+.search input {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.search input:first-of-type {
+  width: 25vw;
+}
+
+.nav-options li {
+  display: inline-block;
+  color: #0F9EB1;
+  padding: 0 25px 25px 25px;
+}
+
+/* Hero */
+
+.intro {
+  background: url("../images/hero1.jpg") no-repeat;
+  background-size: cover;
+  background-position: 50% 25%;
+  height: 100vh;
+  max-width: 100%;
+  margin: auto;
+}
+
+.movie-intro {
+  color: #fff;
+  bottom: 20px;
+  margin: 0 4em;
+  position: absolute;
+  padding: 8px 0;
+  width: 100%;
+  text-align: left;
+}
+
+.movie-intro li {
+  margin-bottom: 1em;
+}
+
+.rotten-tomato, .rating-and-tomato p {
+  display: inline-block;
+}
+
+.rating-and-tomato p {
+  padding-right: 25px;
+}
+
+.rotten-tomato-icon img {
+  height: 1em;
+  width: auto;
+}
+
+.carousel-indicator {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+}
+
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  z-index: 1;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Movie Nav */
+
+.nav_movie {
+  background-color: #62C2CC;
+  height: 50px;
+  line-height: 50px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  width: 100vw;
+  z-index: 5;
+}
+
+.nav_movie li {
+  display: inline-block;
+  color: #FFF;
+  width: 20vw;
+}
+
+.nav_movie li:first-of-type {
+  margin-left: 4em;
+}
+
+/* Main Body */
+
+.container {
+  margin: 0 4em;
+}
+
+.movie-desc-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 25px;
+}
+
+.movie-desc-text {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  margin-top: 3em;
+}
+
+.movie-desc-img img {
+  display: block;
+  width: 90%;
+  height: auto;
+  text-align: center;
+}
+
+.movie-desc-img {
+  grid-column-start: 2;
+  margin-top: 3em;
+}
+
+.read-more {
+  font-size: .75rem;
+  color: #696969;
+  padding-top: 25px;
+}
+
+/* Carousel */
+
+.cast-crew {
+  margin-top: 4em;
+}
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.card {
+  display: inline-block;
+}
+
+.card img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+/* Watch in Theatres */
+
+.watch-theatre {
+  margin-top: 4em;
+}
+
+.choose-day-carousel {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.align p, .align h2 {
+  display: inline-block;
+}
+
+.align p {
+  color: #696969;
+  margin-left: 25px;
+}
+
+.bold {
+  color: #222;
+}
+
+.day-button {
+  width: 11em;
+  height: 3em;
+  background-color: #62C2CC;
+  color: #fff;
+  display: inline-block;
+  margin-right: 25px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 7em;
+}
+
+.day-button p {
+  line-height: .75;
+  vertical-align: middle;
+}
+
+.day-button p:first-of-type {
+  margin-top: .5em;
+}
+
+/* Theatre Showtimes */
+
+.all-theatre-showtimes {
+  margin-top: 4em;
+  background-color: #f7f7f7;
+}
+
+.all-theatre-showtimes h3 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.all-theatre-showtimes p {
+  margin-bottom: 0;
+}
+
+.theatre-desc-times {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(8, 200px);
+  grid-column-gap: 10px;
+  margin-top: 0;
+  border-bottom:
+}
+
+.theatre-info {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+.grand-theatre-info {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.regal-theatre-info {
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.century-theatre-info {
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+.distance {
+  grid-column-start: 4;
+  margin-top: 3.2rem;
+  font-size: .75rem;
+  text-align: right;
+}
+
+.grand-distance, .grand-handicap-icon, .grand-maps-icon, .grand-cc-icon {
+  grid-row-start: 1;
+}
+
+.regal-distance, .regal-handicap-icon, .regal-maps-icon, .regal-cc-icon {
+  grid-row-start: 3;
+}
+
+.century-distance, .century-handicap-icon, .century-maps-icon, .century-cc-icon {
+  grid-row-start: 5;
+}
+
+.handicap-icon {
+  grid-column-start: 6;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.maps-icon {
+  grid-column-start: 3;
+  margin-top: 6rem;
+  margin-left: 2rem;
+}
+
+.cc-icon {
+  grid-column-start: 7;
+  margin-top: 3rem;
+}
+
+.theatre-icons img {
+  display: inline-block;
+  width: 25px;
+  height: auto;
+}
+
+.theatre-showtimes {
+  grid-column-start: 1;
+  grid-column-end: 8;
+}
+
+.grand-theatre-showtimes {
+  grid-row-start: 2;
+}
+
+.regal-theatre-showtimes {
+  grid-row-start: 4;
+}
+
+.century-theatre-showtimes {
+  grid-row-start: 6;
+}
+
+.century-xd-theatre-showtimes {
+  grid-row-start: 8;
+}
+
+.century-theatre-xd-showtimes p:last-of-type {
+  margin-bottom: 1rem;
+}
+
+.theatre-showtimes h4 {
+  margin-bottom: 1rem;
+}
+
+.showtimes-btn-list-item {
+  display: inline-block;
+  width: 5em;
+  height: 2em;
+  color: #fff;
+  background-color: #F68B1F;
+  border-radius: 5px;
+  text-align: center;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  line-height: 2em;
+}
+
+.showtimes-btn-list-item p {
+  vertical-align: middle;
+}
+
+.theatre-img {
+  grid-column-start: 8;
+  grid-column-end: 12;
+}
+
+.grand-theatre-img {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.regal-theatre-img {
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.century-theatre-img {
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+.theatre-img img {
+  height: 400px;
+  width: 600px;
+  object-fit: cover;
+}
+
+.long-theatre-name h4 {
+  margin-top: 1rem;
+}
+
+/* Reviews */
+
+.reviews {
+  margin-top: 4em;
+}
+
+.review-intro h2, .review-intro p {
+  display: inline-block;
+}
+
+.review-intro p {
+  margin-left: 25px;
+  color: #696969;
+}
+
+/* .review-wrapper {
+  display: inline-block;
+} */
+
+.review-card {
+  background-color: #f7f7f7;
+  padding: 25px;
+  display: inline-block;
+  width: 45%;
+  height: auto;
+}
+
+.star img, .star1 img {
+  height: 25px;
+  width: 25px;
+}
+
+.star-icons, .reviewer-info {
+  display: inline-block;
+}
+
+.profile-pic, .profile-name {
+  display: inline-block;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin-right: 1em;
+}
+
+.pic1 {
+  background-image:url('../images/susan.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.reviewer-info {
+  float: right;
+}
+
+.reviewer-info p {
+  margin-bottom: 0;
+}
+
+.review-text p:first-of-type {
+  margin-top: 3rem;
+}
+
+.more {
+  float: right;
+  color: #696969;
+}
+
+.review-card:nth-of-type(2) {
+  float: right;
+  margin-left: 10px;
+}
+
+.more-movies {
+  margin-top: 4rem;
+}
